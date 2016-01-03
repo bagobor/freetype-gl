@@ -1,7 +1,7 @@
 /* =========================================================================
  * Freetype GL - A C OpenGL Freetype engine
  * Platform:    Any
- * WWW:         http://code.google.com/p/freetype-gl/
+ * WWW:         https://github.com/rougier/freetype-gl
  * -------------------------------------------------------------------------
  * Copyright 2011,2012 Nicolas P. Rougier. All rights reserved.
  *
@@ -39,6 +39,10 @@ extern "C" {
 
 #include "texture-font.h"
 #include "vec234.h"
+
+#ifdef __cplusplus
+namespace ftgl {
+#endif
 
 /**
  * @file   markup.h
@@ -84,7 +88,7 @@ extern "C" {
 /**
  * Simple structure that describes text properties.
  */
-typedef struct
+typedef struct markup_t
 {
     /**
      * A font family name such as "normal", "sans", "serif" or "monospace".
@@ -178,13 +182,16 @@ typedef struct
 
 } markup_t;
 
-
+/**
+  * Default markup
+  */
 extern markup_t default_markup;
 
 
 /** @} */
 
 #ifdef __cplusplus
+}
 }
 #endif
 

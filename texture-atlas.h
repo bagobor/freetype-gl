@@ -1,7 +1,7 @@
 /* ============================================================================
  * Freetype GL - A C OpenGL Freetype engine
  * Platform:    Any
- * WWW:         http://code.google.com/p/freetype-gl/
+ * WWW:         https://github.com/rougier/freetype-gl
  * ----------------------------------------------------------------------------
  * Copyright 2011,2012 Nicolas P. Rougier. All rights reserved.
  *
@@ -53,6 +53,10 @@ extern "C" {
 #include "vector.h"
 #include "vec234.h"
 
+#ifdef __cplusplus
+namespace ftgl {
+#endif
+
 /**
  * @file   texture-atlas.h
  * @author Nicolas Rougier (Nicolas.Rougier@inria.fr)
@@ -95,7 +99,7 @@ extern "C" {
 /**
  * A texture atlas is used to pack several small regions into a single texture.
  */
-typedef struct
+typedef struct texture_atlas_t
 {
     /**
      * Allocated nodes
@@ -219,6 +223,7 @@ typedef struct
 /** @} */
 
 #ifdef __cplusplus
+}
 }
 #endif
 
